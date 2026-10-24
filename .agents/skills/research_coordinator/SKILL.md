@@ -1,4 +1,3 @@
-
 ---
 name: research_coordinator
 description: Maintain the research project's scope, methodology, research questions, contributions, and experiments. Use when creating or updating PROJECT.md, synthesizing literature findings, or brainstorming research directions.

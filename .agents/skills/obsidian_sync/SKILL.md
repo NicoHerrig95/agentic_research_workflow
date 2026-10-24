@@ -1,4 +1,3 @@
-
 ---
 name: obsidian-sync
 description: Synchronize a research project's Markdown knowledge base with an Obsidian vault through MCP. Use when creating a research project folder in Obsidian, syncing PROJECT.md and literature summaries, discovering relationships between publications, building an Obsidian knowledge graph, or maintaining existing research notes.

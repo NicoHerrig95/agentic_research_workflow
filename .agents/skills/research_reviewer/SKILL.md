@@ -1,4 +1,3 @@
-
 ---
 name: research_reviewer
 description: Critically evaluate scientific research for novelty, methodological rigor, contribution significance, experimental validity, and publication readiness. Use when assessing research quality, identifying weaknesses or competing work, simulating peer review, estimating publication prospects, or recommending journals, conferences, and workshops.

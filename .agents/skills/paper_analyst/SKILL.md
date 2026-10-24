@@ -1,4 +1,3 @@
-
 ---
 name: paper_analyst
 description: Read scientific papers and produce standardized, evidence-backed Markdown summaries. Use when analyzing a PDF, DOI, arXiv paper, or item in the literature reading queue.

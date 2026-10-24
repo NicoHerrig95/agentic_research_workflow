@@ -1,4 +1,3 @@
-
 ---
 name: literature_scout
 description: Discover, verify, deduplicate, and rank scientific papers relevant to a research project. Use when searching related work, identifying competing methods, exploring research gaps, or expanding the literature reading queue.
