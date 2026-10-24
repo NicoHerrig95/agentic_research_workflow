@@ -1,0 +1,120 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/literature-index.schema.json",
+  "title": "Literature Review Index",
+  "description": "Registry of scientific papers discovered and analyzed during a research project.",
+  "type": "object",
+  "patternProperties": {
+    "^P[0-9]{3,}$": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Full title of the scientific paper."
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of paper authors."
+        },
+        "year": {
+          "type": ["integer", "null"],
+          "minimum": 1900,
+          "description": "Publication year."
+        },
+        "doi": {
+          "type": ["string", "null"],
+          "description": "Digital Object Identifier, if available."
+        },
+        "url": {
+          "type": "string",
+          "description": "URL of the paper or publication."
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "description": "Research topics associated with the paper."
+        },
+        "relevance": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "enum": ["high", "medium", "low", null],
+              "description": "Relevance to the research project."
+            },
+            "reason": {
+              "type": "string",
+              "description": "Explanation of relevance."
+            },
+            "related_rqs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^RQ[0-9]+$"
+              },
+              "uniqueItems": true,
+              "description": "Related research question identifiers."
+            }
+          },
+          "required": [
+            "score",
+            "reason",
+            "related_rqs"
+          ],
+          "additionalProperties": false
+        },
+        "contribution": {
+          "type": "string",
+          "description": "Concise summary of the paper's main scientific contribution."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "discovered",
+            "screened",
+            "in_progress",
+            "analyzed",
+            "excluded"
+          ],
+          "description": "Current stage of the literature review."
+        },
+        "summary_path": {
+          "type": ["string", "null"],
+          "description": "Relative path to the detailed Markdown paper analysis."
+        },
+        "date_added": {
+          "type": "string",
+          "format": "date",
+          "description": "Date the paper was added to the registry."
+        },
+        "date_analyzed": {
+          "type": ["string", "null"],
+          "format": "date",
+          "description": "Date the detailed analysis was completed."
+        }
+      },
+      "required": [
+        "title",
+        "authors",
+        "year",
+        "doi",
+        "url",
+        "topics",
+        "relevance",
+        "contribution",
+        "status",
+        "summary_path",
+        "date_added",
+        "date_analyzed"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

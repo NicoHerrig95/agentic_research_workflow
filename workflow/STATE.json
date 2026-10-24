@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "stage": "intake",
+  "project_sha256": "4da80b28db050cc6b13a7584272e2d84047a1a75965978c38ae0df5d3fbdc196",
+  "updated_at": "2026-10-24T10:37:29.623626+00:00",
+  "limits": {
+    "max_search_queries": 8,
+    "max_candidates": 30,
+    "max_papers": 5,
+    "max_parallel_analysts": 3,
+    "max_cycles": 1,
+    "max_task_attempts": 2
+  },
+  "tasks": [],
+  "approval_requests": [],
+  "unresolved_issues": []
+}

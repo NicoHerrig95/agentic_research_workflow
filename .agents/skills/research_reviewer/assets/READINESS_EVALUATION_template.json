@@ -1,0 +1,80 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Publication Readiness Assessment",
+  "description": "Evaluation of a research project's scientific quality and suitability for publication in a high-impact journal or conference.",
+  "type": "object",
+  "properties": {
+    "novelty": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Degree to which the proposed research introduces genuinely new scientific ideas, methods, theories, or findings compared with existing literature. A high score requires substantial, evidence-supported differentiation from the closest prior work. A low score indicates incremental contributions or substantial overlap with existing work."
+    },
+    "scientific_significance": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Importance of the research problem and the potential impact of its contributions on the scientific community. A high score indicates that the research addresses a substantial problem and could meaningfully advance understanding or practice beyond a narrow application."
+    },
+    "technical_soundness": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Correctness and rigor of the proposed methodology, mathematical formulations, algorithms, and underlying assumptions. A high score requires well-justified methodological choices, logically consistent formulations, and the absence of major technical flaws."
+    },
+    "experimental_rigor": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Quality of the experimental design and its ability to substantiate the research claims. Consider dataset selection, meaningful baselines, ablations, statistical validity, robustness, and generalizability. A high score requires comprehensive experiments that convincingly support the claimed contributions."
+    },
+    "contribution_clarity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Clarity, specificity, and coherence of the research contributions and their relationship to the research questions, methodology, and experimental evidence. A high score indicates that contributions are precisely formulated, distinguishable from prior work, and supported by a coherent scientific argument."
+    },
+    "reproducibility": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Extent to which independent researchers could reproduce the proposed methodology and experimental results. Consider documentation, implementation details, datasets, hyperparameters, random seeds, and accessibility of code or artifacts. A high score indicates that the work is thoroughly specified and practically reproducible."
+    },
+    "evidence_maturity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Extent to which the claimed contributions are substantiated by completed theoretical analysis, experiments, and validated results rather than planned or preliminary work. A high score indicates that the primary scientific claims are supported by sufficiently complete and reliable evidence."
+    },
+    "community_fit": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Relevance of the research problem, methodology, and contributions to the intended scientific community and its publication expectations. A high score indicates strong alignment with the research interests and standards of a clearly identifiable community. When a specific venue is provided, evaluate fit relative to that venue."
+    },
+    "overall_readiness": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "Holistic assessment of the project's current readiness for publication in a high-impact scientific journal or competitive conference. Consider all evaluation dimensions, giving particular weight to novelty, significance, technical soundness, and experimental evidence. Do not calculate this score as a simple arithmetic average."
+    },
+    "assessment_summary": {
+      "type": "string",
+      "description": "Concise, critical justification of the overall assessment. Identify the main scientific strengths, most significant weaknesses, likely publication obstacles, and highest-priority improvements. Distinguish established findings from unverified assumptions."
+    }
+  },
+  "required": [
+    "novelty",
+    "scientific_significance",
+    "technical_soundness",
+    "experimental_rigor",
+    "contribution_clarity",
+    "reproducibility",
+    "evidence_maturity",
+    "community_fit",
+    "overall_readiness",
+    "assessment_summary"
+  ],
+  "additionalProperties": false
+}
